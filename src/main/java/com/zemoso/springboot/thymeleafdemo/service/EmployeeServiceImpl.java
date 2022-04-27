@@ -17,6 +17,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 
 
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
+    public EmployeeServiceImpl() {
+
+    }
 
     @Override
     public List<Employee> findAll() {

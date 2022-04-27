@@ -21,6 +21,13 @@ public class DemoController {
     @Autowired
     EmployeeService employeeService;
 
+    public DemoController() {
+    }
+
+    public DemoController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
+
     @GetMapping("/")
     public String home(){
         return "index";
